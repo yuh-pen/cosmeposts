@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
 
+  root to: 'cosme_pictures#index'
 
 
+  get 'cosme_pictures/index'
+
+  get 'cosme_pictures/show'
+
+  get 'cosme_pictures/new'
+
+  get 'cosme_pictures/create'
+
+  get 'cosme_pictures/edit'
+
+  get 'cosme_pictures/destroy'
 
   get 'sessions/new'
 

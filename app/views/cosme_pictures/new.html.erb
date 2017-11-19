@@ -1,0 +1,24 @@
+
+<div class="text-center">
+  <h1>Post on CosmePictures</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    
+
+    
+    <%= form_for(@cosme_picture) do |f| %>
+     <%= render 'layouts/error_messages', model: f.object %>
+    
+      <div class="form-group">
+        <%= f.label :picture, 'picture' %>
+        <%= f.file_field :picture, class: 'form-control' %>
+      </div>
+      
+     
+      
+      <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+    <% end %>
+  </div>
+</div>
