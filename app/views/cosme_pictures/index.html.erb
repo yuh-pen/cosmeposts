@@ -1,20 +1,13 @@
-<div class="container-fluid">
-  <div class = "row">
- 
+<div>
   <% @cosme_pictures.each do |cosme_picture| %>
   <% user = cosme_picture.user %>
-      <div class = "picture-list">
-            
-          <div><%= link_to user.name, user_path(user) %> <span class="text-muted"></span></div>
-          <%= image_tag(cosme_picture.picture.url(:thumb)) %> 
-          <div>
-              <% if current_user == cosme_picture.user %>
-              <%= link_to "Delete", cosme_picture, method: :delete, data: {confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
-            <% end %>
-          </div>
-      </div>
-  </div>
-</div>
-
+    <div class ="row picture-list col-xs-6 col-md-3">
+      <%= link_to user.name, user_path(user) %> <span class="text-muted"></span>
+      <%= image_tag(cosme_picture.picture.url(:thumb), :class => "img-responsive") %>
+        <% if current_user == cosme_picture.user %>
+          <%= link_to "Delete", cosme_picture, method: :delete, data: {confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
+        <% end %>
+    </div>
   <% end %>
-  <%= paginate @cosme_pictures %>
+</div>
+<%= paginate @cosme_pictures %>
