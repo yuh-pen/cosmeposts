@@ -59,7 +59,7 @@ gem 'carrierwave'
 gem 'rmagick'
 
 gem 'pry-byebug', group: :development
-gem 'fog'
+gem 'fog-aws'
 
 #herokuで利用するpostgreSQL
 group :production do
