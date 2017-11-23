@@ -4,7 +4,7 @@
     <%= link_to @user.name, user_path(@user) %>
 
     <% if current_user == @cosme_picture.user %>
-        <%= link_to "Edit", cosme_pictures_edit_path(@cosme_picture), class: 'btn btn-warning btn-xs' %>
+        <!--<%= link_to "Edit", cosme_pictures_edit_path(@cosme_picture), class: 'btn btn-warning btn-xs' %>-->
         <%= link_to "Delete", @cosme_picture, method: :delete, data: {confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
     <% end %>
     </h3>
