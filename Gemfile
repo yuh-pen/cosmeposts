@@ -58,7 +58,10 @@ gem 'bcrypt', '~>3.1.7'
 gem 'carrierwave'
 gem 'rmagick'
 
+#暗号化
 gem 'pry-byebug', group: :development
+
+
 gem 'fog-aws'
 
 #herokuで利用するpostgreSQL

@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @cosme_pictures = @user.cosme_pictures.page(params[:page])
   end
 
   def create
