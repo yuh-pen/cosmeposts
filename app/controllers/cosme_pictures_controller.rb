@@ -7,7 +7,8 @@ class CosmePicturesController < ApplicationController
   end
 
   def show
-    @cosme_pictures = CosmePicture.find(params[:id])
+    @cosme_picture = CosmePicture.find(params[:id])
+    @user = @cosme_picture.user
   end
 
   def new
