@@ -21,7 +21,7 @@ class CosmePicturesController < ApplicationController
       flash[:success] = '投稿しました。'
       redirect_to root_url
     else
-      @cosme_picture = current_user.feed_CosmePictures.order('created_at DESC').page(params[:page])
+      @cosme_pictures = CosmePicture.all.page(params[:page])
       flash.now[:danger] = '投稿に失敗しました。'
       render '/cosme_pictures/index'
     end
@@ -38,7 +38,7 @@ class CosmePicturesController < ApplicationController
   
   private
   def cosme_pictures_params
-    params.require(:cosme_picture).permit(:picture)
+    params.require(:cosme_picture).permit(:picture, :tag_list)
   end
   
   def correct_user

@@ -68,3 +68,6 @@ gem 'fog-aws'
 group :production do
   gem 'pg'
 end
+
+#タグ追加
+gem 'acts-as-taggable-on'

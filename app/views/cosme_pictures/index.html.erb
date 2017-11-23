@@ -4,6 +4,11 @@
     <div class ="row picture-list col-xs-6 col-md-3" style="padding: 40px 20px 0 20px">
       <%= link_to user.name, user_path(user) %> <span class="text-muted"></span>
       <%= link_to image_tag(cosme_picture.picture.url(:thumb), :class => "img-responsive"), cosme_picture %>
+      
+      <% cosme_picture.tag_list.each do |tag| %>
+        <span class="label label-primary"><%= tag %></span>
+      <% end %><br>
+      
         <% if current_user == cosme_picture.user %>
           <%= link_to "Delete", cosme_picture, method: :delete, data: {confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
         <% end %>
