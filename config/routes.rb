@@ -4,13 +4,6 @@ Rails.application.routes.draw do
 
   root to: 'cosme_pictures#index'
 
-  
-
-
-
-
-  
-
   get 'cosme_pictures/new'
 
   get 'cosme_pictures/create'
@@ -22,7 +15,7 @@ Rails.application.routes.draw do
 
 
   get 'signup',to:'users#new'
-  resources :users, only:[:show,  :create, :edit, :destroy]
+  resources :users, only:[:show,  :create, :edit, :update, :destroy]
   resources :cosme_pictures, only:[:index, :show, :new, :create, :edit, :destroy]
   resources :tags, only:[:show]
  

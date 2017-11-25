@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
   def show
-    @tag = params[:format]
-    @cosme_pictures = CosmePicture.tagged_with(params[:format])
+    @tag = params[:id]
+    @cosme_pictures = CosmePicture.tagged_with(params[:id])
   end
 end

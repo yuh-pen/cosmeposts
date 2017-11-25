@@ -1,6 +1,6 @@
 <h3><%=@user.name %></h3>
 <% if current_user == @user %><br>
- <%= link_to "Edit my profile", @user, method: :delete, data: {confirm: "投稿されたデータ等全て削除されます。よろしいですか？" }, class: 'btn btn-danger' %>
+ <%= link_to "Edit my profile", edit_user_path(@user), class: 'btn btn-warning' %>
  <%= link_to "Delete my account", @user, method: :delete, data: {confirm: "投稿されたデータ等全て削除されます。よろしいですか？" }, class: 'btn btn-danger' %>
 <% end %><br>
   <% @cosme_pictures.each do |cosme_picture| %> 
@@ -8,7 +8,7 @@
     <%= link_to image_tag(cosme_picture.picture.url(:thumb), :class => "img-responsive"), cosme_picture %>
     
     <% cosme_picture.tag_list.each do |tag| %>
-      <span class="label label-primary"><%= tag %></span>
+      <%= link_to tag, tag_path(tag), class: 'label label-primary' %>
     <% end %><br>
     
     <% if current_user == cosme_picture.user %>
