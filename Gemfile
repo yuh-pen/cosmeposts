@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -54,7 +54,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'kaminari'
 
-gem 'bcrypt', '~>3.1.7'
 gem 'carrierwave'
 gem 'rmagick'
 
@@ -71,3 +70,9 @@ end
 
 #タグ追加
 gem 'acts-as-taggable-on'
+
+#タグ入力 bootstrap
+gem 'bootstrap-tagsinput-rails'
+
+
+

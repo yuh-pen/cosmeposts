@@ -18,7 +18,7 @@
       
       <div class="form-group">
         <%= f.label :tag_list, "タグ（カンマ区切り）" %>
-        <%= text_field_tag 'cosme_picture[tag_list]', @cosme_picture.tag_list.join(','),  "data-role": "tagsinput", class: "form-control" %>
+        <%= text_field_tag :'cosme_picture[tag_list]', @cosme_picture.tag_list.join(','),  "data-role" => "tagsinput", class: "form-control" %>
       </div>
       
     
