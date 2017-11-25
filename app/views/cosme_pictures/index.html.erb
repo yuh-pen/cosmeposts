@@ -6,7 +6,7 @@
       <%= link_to image_tag(cosme_picture.picture.url(:thumb), :class => "img-responsive"), cosme_picture %>
       
       <% cosme_picture.tag_list.each do |tag| %>
-        <%= link_to tag, tags_show_path(tag), class: 'label label-primary' %>
+        <%= link_to tag, tag_path, class: 'label label-primary' %>
       <% end %><br>
       
         <% if current_user == cosme_picture.user %>
