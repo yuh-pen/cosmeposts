@@ -74,5 +74,8 @@ gem 'acts-as-taggable-on'
 #タグ入力 bootstrap
 gem 'bootstrap-tagsinput-rails'
 
+gem 'bootstrap-sass'
+
+
 
 
