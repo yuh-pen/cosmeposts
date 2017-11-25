@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
   def show
-    @tagname = params[:format]
-    @cosme_pictures = @user.find_related_tag("マキシマイザー")
+    @tag = params[:format]
+    @cosme_pictures = CosmePicture.tagged_with(params[:format])
   end
 end
